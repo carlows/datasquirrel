@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_06_30_014814) do
 
-  create_table "counts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "counts", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "slug", null: false
     t.bigint "group_id"
     t.datetime "created_at", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_06_30_014814) do
     t.index ["slug"], name: "index_counts_on_slug"
   end
 
-  create_table "gauges", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "gauges", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "slug", null: false
     t.float "value", null: false
     t.bigint "group_id"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_06_30_014814) do
     t.index ["slug"], name: "index_gauges_on_slug"
   end
 
-  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
