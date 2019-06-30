@@ -46,7 +46,7 @@ A gauge metric allows you to track the value of something (like a ticket's lead 
 
 ```
 curl -X POST \
-  http://localhost:8888/groups/test/gauge/emit \
+  http://localhost:8888/groups/<group-name>/gauge/emit \
   -d '{
 	"slug": "test",
 	"value": 1.5
@@ -60,35 +60,35 @@ The value has no unit, so you can count your metric as days, hours or whatever y
 #### Get a count metric for all time
 
 ```
-curl -X GET 'http://localhost:8888/groups/test/count?slug=lead-time'
+curl -X GET 'http://localhost:8888/groups/<group-name>/count?slug=lead-time'
 ```
 
 #### Get a count metric for the last month
 
 ```
-curl -X GET 'http://localhost:8888/groups/gsw/count?slug=lead-time&current_month=true'
+curl -X GET 'http://localhost:8888/groups/<group-name>/count?slug=lead-time&current_month=true'
 ```
 
 #### Get a count metric for the last year
 
 ```
-curl -X GET 'http://localhost:8888/groups/gsw/count?slug=lead-time&current_year=true'
+curl -X GET 'http://localhost:8888/groups/<group-name>/count?slug=lead-time&current_year=true'
 ```
 
 #### Get the latest value of a gauge metric
 
 ```
-curl -X GET 'http://localhost:8888/groups/gsw/gauge/latest?slug=lead-time'
+curl -X GET 'http://localhost:8888/groups/<group-name>/gauge/latest?slug=lead-time'
 ```
 
 #### Get the average value of a gauge metric for all time
 
 ```
-curl -X GET 'http://localhost:8888/groups/gsw/gauge/mean?slug=lead-time'
+curl -X GET 'http://localhost:8888/groups/<group-name>/gauge/mean?slug=lead-time'
 ```
 
 #### Get the average value of a gauge metric for the current month
 
 ```
-curl -X GET 'http://localhost:8888/groups/gsw/gauge/mean?slug=lead-time&current_month=true'
+curl -X GET 'http://localhost:8888/groups/<group-name>/gauge/mean?slug=lead-time&current_month=true'
 ```
