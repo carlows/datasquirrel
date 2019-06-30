@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
 
     if @group.save
-      render json: @group, status: :created
+      render json: { name: @group.name }, include: [:name], status: :created
     else
       render json: @group.errors, status: :unprocessable_entity
     end
