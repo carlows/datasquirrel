@@ -1,4 +1,4 @@
-# DataSquirrel
+# Datasquirrel
 
 ![squirrel](http://icons.iconarchive.com/icons/majdi-khawaja/ice-age-4/256/Scrat-icon.png)
 
