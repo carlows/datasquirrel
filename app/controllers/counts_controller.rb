@@ -1,7 +1,7 @@
 class CountsController < ApplicationController
-  before_action :set_group, only: [:increment, :count]
+  before_action :set_group, only: [:emit, :count]
 
-  def increment
+  def emit
     @metric = @group.counts.new(count_params)
 
     if @metric.save

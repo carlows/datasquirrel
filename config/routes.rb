@@ -1,10 +1,12 @@
 Jets.application.routes.draw do
   post 'groups', to: 'groups#create'
 
-  post 'groups/:name/count/increment', to: 'counts#increment'
+  post 'groups/:name/count/emit', to: 'counts#emit'
   post 'groups/:name/gauge/emit', to: 'gauges#emit'
 
   get 'groups/:name/count', to: 'counts#count'
+  get 'groups/:name/gauge/latest', to: 'gauges#latest'
+  get 'groups/:name/gauge/mean', to: 'gauges#mean'
 
   # root "jets/public#show"
 
