@@ -12,8 +12,8 @@ Jets.application.configure do
 
   # config.asset_base_url = 'https://cloudfront.domain.com/assets' # example
 
-  # config.cors = true # for '*'' # defaults to false
-  # config.cors = '*.mydomain.com' # for specific domain
+  config.cors = true # for '*'' # defaults to false
+  # config.cors = '*' # for specific domain
 
   # config.function.timeout = 30 # defaults to 30
   # config.function.role = "arn:aws:iam::#{Jets.aws.account}:role/service-role/pre-created"
