@@ -92,3 +92,17 @@ curl -X GET 'http://localhost:8888/groups/<group-name>/gauge/mean?slug=lead-time
 ```
 curl -X GET 'http://localhost:8888/groups/<group-name>/gauge/mean?slug=lead-time&current_month=true'
 ```
+
+#### Get grouped count data
+
+```
+curl -X GET 'http://localhost:8888/groups/<group-name>/count/group?slug=lead-time&current_month=true&by_day=true'
+```
+
+## Deployment requirements
+
+You must enable mysql timezones to use the chart filters:
+
+```
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u my_user -p -h localhost mysql
+```

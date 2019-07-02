@@ -5,6 +5,8 @@ Jets.application.routes.draw do
   post 'groups/:name/gauge/emit', to: 'gauges#emit'
 
   get 'groups/:name/count', to: 'counts#count'
+  get 'groups/:name/count/group', to: 'counts#group'
+
   get 'groups/:name/gauge/latest', to: 'gauges#latest'
   get 'groups/:name/gauge/mean', to: 'gauges#mean'
 
