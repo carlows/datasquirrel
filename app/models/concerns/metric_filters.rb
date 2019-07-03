@@ -18,9 +18,9 @@ module MetricFilters
     if params[:by_month]
       records = records.group_by_month(:created_at, format: '%b')
     elsif params[:by_week]
-      records = records.group_by_week(:created_at, format: '%e %b')
+      records = records.group_by_week(:created_at, format: '%d %b')
     elsif params[:by_day]
-      records = records.group_by_day(:created_at, format: '%e %b')
+      records = records.group_by_day(:created_at, format: '%d %b')
     end
 
     records.count
