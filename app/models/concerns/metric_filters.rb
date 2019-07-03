@@ -20,7 +20,7 @@ module MetricFilters
     elsif params[:by_week]
       records = records.group_by_week(:created_at, format: '%e %b')
     elsif params[:by_day]
-      records = records.group_by_week(:created_at, format: '%e %b')
+      records = records.group_by_day(:created_at, format: '%e %b')
     end
 
     records.count
